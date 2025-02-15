@@ -23,7 +23,7 @@ cd SWIFT_Management
 ### Step 2: Build and run the project using Docker Compose
 To build and run the project with Docker and Docker Compose, use the following command:
 
-docker-compose up --build
+docker-compose up -d --build
 
 
 ### Step 3: Access the application
@@ -43,11 +43,12 @@ Enter the password (user1234) when prompted.
 ### Interacting with the API
 The web application exposes several RESTful endpoints. Here are some example endpoints you can use to interact with the data:
 
-GET /swift-codes/headquarters: Get all headquarters data.
-GET /swift-codes/branches: Get all branches data.
-GET /swift-codes/headquarters/{swiftCode}: Get headquarters data by SWIFT code.
-GET /swift-codes/branches/{swiftCode}: Get branch data by SWIFT code.
-
+<p>
+  GET /v1/swift-codes/{swift_code} : Get all headquarters with branches or branches data.<br>
+  GET /v1/swift-codes/country/{countryISO2} : Get all headquarters with branches or branches data for specified country by country ISO2 code.<br>
+  POST /v1/swift-codes: Posts new data.<br>
+  DELETE /v1/swift-codes/{swift_code}: Deletes chosen data by swift code.<br>
+</p>
 
 ### Database Initialization
 The MySQL container will automatically load a dump of the database when it's started for the first time. 
