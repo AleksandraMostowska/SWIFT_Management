@@ -16,8 +16,11 @@ Before running the application, make sure the following tools are installed:
 
 Clone the project repository to your local machine:
 
-git clone https://github.com/AleksandraMostowska/SWIFT_Management.git
-cd SWIFT_Management
+<p>
+  git clone https://github.com/AleksandraMostowska/SWIFT_Management.git<br>
+  cd SWIFT_Management
+</p>
+
 
 
 ### Step 2: Build and run the project using Docker Compose
@@ -37,7 +40,22 @@ If you want to access the MySQL database directly, you can connect to the MySQL 
 
 docker exec -it swift_management-mysql-1 mysql -u user -p db_1
 
-Enter the password (user1234) when prompted.
+<p>
+  Enter the password (user1234) when prompted.<br>
+  The name of the docker container may be found under command:<br>
+  docker ps 
+</p>
+
+### Application Environment Configuration
+
+The application uses an application.properties file for database configuration. Below are the key properties:
+
+<p>
+  db.url=jdbc:mysql://mysql:3307/db_1?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC<br>
+  db.username=user<br>
+  db.password=user1234
+</p>
+
 
 
 ### Interacting with the API
