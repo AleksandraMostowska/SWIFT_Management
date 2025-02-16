@@ -68,6 +68,11 @@ The web application exposes several RESTful endpoints. Here are some example end
   DELETE /v1/swift-codes/{swift_code}: Deletes chosen data by swift code.<br>
 </p>
 
+### Postman Documentation
+You can access the full API documentation using the following Postman link:
+
+[Postman API Documentation](https://documenter.getpostman.com/view/36744686/2sAYXEFJpi)
+
 ### Database Initialization
 The MySQL container will automatically load a dump of the database when it's started for the first time. 
 The dump.sql file is located in the mysql_data folder, and it will populate the database with initial data.
